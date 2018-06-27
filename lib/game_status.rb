@@ -20,7 +20,7 @@ winner = []
 empty_board = board.all? {|x| x == " "}
 WIN_COMBINATIONS.each do |win_combination|
     if empty_board || full?(board)
-      return false
+      return nil
     elsif win_combination.all? { |value| board[value] =="X" } || win_combination.all? { |value| board[value] =="O" }
       winner = win_combination
     end
